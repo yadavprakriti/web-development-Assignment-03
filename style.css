@@ -1,0 +1,196 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 4fr 4fr;
+    grid-template-rows: 1fr 4fr 3fr 2fr;
+    height: 100vh;
+}
+.box{
+    border: 2px solid black;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: large;
+    background-color: rgb(8, 8, 32);
+    color: white;
+    height: 10vh;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    grid-column: 2/4;
+    grid-row: 1/2;
+    background-color:red;
+    height: 10vh;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.hero{
+    background: url("https://thumbs.dreamstime.com/z/artificial-intelligence-concept-diagram-ai-shows-elements-related-to-big-data-deep-robotic-machine-learning-visualization-268895199.jpg") center/cover;
+    grid-column: 1/4;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    font-size: 30px;
+    height: 40vh;
+}
+.about{
+    color: black;
+    grid-column: 1/3;
+    grid-row: 3/4;
+    padding: 20px;
+    font-size: 20px;
+    background-color:gray;
+    color: white;
+    height: 50vh;
+}
+.image{
+    grid-column: 3/4;
+    grid-row: 3/4;
+    background: url("https://www.workitdaily.com/media-library/artificial-intelligence-ai-technology-concept.jpg?id=34199573&width=1200&height=800&quality=85&coordinates=84%2C0%2C84%2C0") center/cover;
+    height: 50vh;
+}
+.offer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    grid-column: 1/3;
+    grid-row: 4/5;
+    background-color:yellow;
+    font-size: 20px;
+    height: 30vh;
+
+}
+button{
+    background-color: black;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.contact{
+    grid-column: 3/4;
+    grid-row: 4/5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color:greenyellow;
+    height: 30vh;
+}
+
+/* tablet view */
+@media screen and (min-width: 600px) and (max-width: 1024px){
+    .grid{
+    grid-template-rows: 1fr 4fr 6fr 2fr 2fr;
+}
+.logo{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 10vh;
+}
+.menu{
+    flex-direction: column;
+    font-size: 30px;
+    grid-column: 1/2;
+    grid-row: 2/5;
+    height: 120vh;
+}
+.hero{
+    grid-column: 2/4;
+    grid-row: 1/3;
+    height: 50vh;
+}
+.about{
+    grid-column: 2/4;
+    grid-row: 3/4;
+    font-size: 20px;
+    height: 60vh;
+}
+.offer{
+    grid-column: 2/4;
+    grid-row: 4/5;
+    gap: 10px;
+    height: 20vh;
+}
+.contact{
+    grid-column: 1/3;
+    grid-row: 5/6;
+    height: 30vh;
+    /* font-size: 30px; */
+}
+.image{
+    grid-column: 3/4;
+    grid-row: 5/6;
+    height: 30vh;
+}
+}
+
+
+/* mobile view */
+@media screen and (min-width: 300px) and (max-width: 600px){
+    .grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 1fr 5fr 6fr 3fr 2.5fr 3fr;
+}
+.logo{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    /* height: 10vh; */
+}
+.menu{
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-direction: row;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    /* height: 50px; */
+}
+.hero{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    font-size: small;
+    /* gap: 5px; */
+    /* height: 20vh; */
+}
+.about{
+    grid-column: 1/2;
+    grid-row: 4/5;
+    font-size:small;
+    /* height: 40vh; */
+}
+.offer{
+    grid-column: 1/2;
+    grid-row: 5/6;
+    /* font-size:; */
+    /* height: 20vh; */
+    /* gap: 10px; */
+}
+.contact{
+    grid-column: 1/2;
+    grid-row: 6/7;
+    /* height: 20vh; */
+}
+.image{
+    grid-column: 1/2;
+    grid-row: 7/8;
+    /* height: 40vh; */
+}
+}
